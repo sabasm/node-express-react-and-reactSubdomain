@@ -8,6 +8,7 @@
     "dev": "concurrently --kill-others \"cd client && yarn start\" \"cd dashboard/dashboard && yarn start\" \"NODE_ENV=development nodemon ./bin/www\""
   },
   "dependencies": {
+    "concurrently": "^4.1.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
