@@ -1,0 +1,17 @@
+{
+  "name": "multimedia",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node ./bin/www",
+    "production": "rm -R public && cd client && yarn build && cd ../dashboard && rm -R public && cd dashboard && yarn build && cd ../.. && yarn start",
+    "dev": "concurrently --kill-others \"cd client && yarn start\" \"cd dashboard/dashboard && yarn start\" \"NODE_ENV=development nodemon ./bin/www\""
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "morgan": "~1.9.0",
+    "vhost": "^3.0.2"
+  }
+}
